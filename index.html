@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kageepan's Portfolio</title>
+    <style>
+        /* Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: burlywood; /* Setting site backround to a color that is easy on eyes */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #004080; /* Dark blue */
+            padding: 1rem;  /* Spacing */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li a {
+            color: burlywood;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        main {
+            padding: 4rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative; /*relative  function to avoid overlap */
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design for Tablet (between 768px and 1023px) */
+        @media (max-width: 1023px) and (min-width: 768px) {
+            main {
+                padding: 2rem;
+            }
+
+            nav ul {
+                justify-content: space-evenly;
+            }
+        }
+
+        /* Responsive Design for Mobile (less than 768px) */
+        @media (max-width: 767px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            footer {
+                position: relative;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <h1>Welcome to My Portfolio!</h1>
+            <p>Hi, I'm Kageepan Satheeskumar, a student in Networking and IT Security.</p>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h1>About Me</h1>
+            <img src="about-me-image.jpg" alt="Kageepan's Photo" style="width:400px;">
+            <p>My hobbies include gaming, reading manga, watching anime, and enjoying nature views from tall places.</p> <!-- Paragraph function to add in info -->
+            
+            
+
+
+            <!-- Embed video Rick roll -->
+            <video controls poster="video-poster.jpg.0" style="width:100%; margin-top: 20px;"> <!-- Adding controls and sizes and spacing -->
+                <source src="about-me-video.mp4" type="video/mp4"> <!-- Location of the video file through src -->
+                
+            </video>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h1>My Projects</h1>
+            <ul>
+                <li><strong>Python</strong>: First year course completed.</li>
+                <li><strong>Object Oriented Programming</strong>: Completed various assignments and completed course during first year.</li>
+                <li><strong>Web Development Assignment</strong>: Current assignment 1 web and script programming.</li>
+            </ul>
+        </section>
+
+        <!--  Developing the Contact Me Section Portion-->
+        <section id="contact">
+            <h1>Contact Me</h1>
+            <form action="#" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">  <!--  The required pattern ensures that only numbers in the correct format will be accepted -->
+
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+     <!--  The footer which holds the contact me info -->
+    <footer>
+        <p>&copy; 2024 Kageepan Satheeskumar | <a href="mailto:kageepanx@gmail.com">Contact via Email</a></p>
+
+        
+    </footer>
+</body>
+</html>
